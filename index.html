@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Texinfo by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Texinfo</h1>
+          <h2>Mirror Of svn://svn.savannah.gnu.org/texinfo</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/texinfo/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/texinfo/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/texinfo" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>$Id$
+This is the README file for the GNU Texinfo distribution.  Texinfo is
+the preferred documentation format for GNU software.</p>
+
+<p>Copyright 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001,
+  2002, 2003, 2004, 2009, 2010, 2011, 2012, 2013
+  Free Software Foundation, Inc.</p>
+
+<p>Copying and distribution of this file, with or without modification,
+  are permitted in any medium without royalty provided the copyright
+  notice and this notice are preserved.</p>
+
+<p>Home page: <a href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a>
+  This page includes links to other Texinfo-related programs.</p>
+
+<p>Primary distribution point: <a href="http://ftp.gnu.org/gnu/texinfo/">http://ftp.gnu.org/gnu/texinfo/</a>
+  automatic mirror redirection: <a href="http://ftpmirror.gnu.org/texinfo/">http://ftpmirror.gnu.org/texinfo/</a>
+                   mirror list: <a href="http://www.gnu.org/prep/ftp.html">http://www.gnu.org/prep/ftp.html</a></p>
+
+<p>Texinfo is a documentation system that uses a single source to produce
+many forms of output:</p>
+
+<ul>
+<li>a PDF or DVI document (via the TeX typesetting system) with the normal
+features of a book, including sectioning, cross references, indices, etc.</li>
+<li>an Info file with analogous features to make documentation browsing easy.</li>
+<li>a plain text (ASCII) file.</li>
+<li>an HTML output file suitable for use with a web browser.</li>
+<li>a Docbook file.</li>
+<li>a XML file transliterating the source with a Texinfo DTD.</li>
+</ul><p>See ./INSTALL* for installation instructions.</p>
+
+<p>To get started with Texinfo, best is to read the Texinfo manual;
+it is online at <a href="http://www.gnu.org/software/texinfo/manual/texinfo">http://www.gnu.org/software/texinfo/manual/texinfo</a>.
+If you don't have Internet access, you can read the manual locally:</p>
+
+<ul>
+<li>first, build the distribution.</li>
+<li>then, for HTML, run: make -C doc html
+and you can start reading at doc/texinfo.html/index.html.</li>
+<li>for PDF, if you have a working TeX, run: make -C doc pdf</li>
+<li>for Info, you can read about the Info reader itself with:
+./info/ginfo doc/info
+and then read the Texinfo manual:
+./info/ginfo doc/texinfo</li>
+</ul><p>Texinfo mailing lists and archives:</p>
+
+<ul>
+<li>
+<a href="http://lists.gnu.org/mailman/listinfo/bug-texinfo">http://lists.gnu.org/mailman/listinfo/bug-texinfo</a>
+for bug reports, enhancement suggestions, technical discussion.</li>
+<li>
+<a href="http://lists.gnu.org/mailman/listinfo/help-texinfo">http://lists.gnu.org/mailman/listinfo/help-texinfo</a>
+for authoring questions and general discussion.
+There are no corresponding newsgroups.</li>
+</ul><p>Bug reports:
+Please include enough information for the maintainers to reproduce the
+problem.  Generally speaking, that means:</p>
+
+<ul>
+<li>the contents of all input files necessary to reproduce the bug (crucial!).</li>
+<li>a statement of the problem and any samples of the erroneous output.</li>
+<li>the version number of Texinfo and the program(s) involved (use --version).</li>
+<li>hardware and operating system information (uname -a).</li>
+<li>unusual options you gave to configure, if any (see config.status).</li>
+<li>anything else that you think could be helpful.</li>
+</ul><p>Patches are most welcome; if possible, please make them with diff -c and
+include ChangeLog entries.</p>
+
+<p>See README-hacking for information on the Texinfo development
+environment -- any interested parties are welcome.  If you're a
+programmer and wish to contribute, this should get you started.  If
+you're not a programmer, you can still make significant contributions by
+writing test cases, checking the documentation against the
+implementation, etc.</p>
+
+<p>This distribution includes the following files, among others:
+    README                 This file.
+    README-hacking         Texinfo developer information.</p>
+
+<pre><code>INSTALL                Texinfo-specific installation notes.
+NEWS                   Summary of new features by release.
+</code></pre>
+
+<p>Texinfo documentation files (in ./doc):
+    texinfo.txi            Describes the Texinfo language and many
+                           of the associated tools.  It tells how to use
+                           Texinfo to write documentation, how to use
+                           Texinfo mode in GNU Emacs, TeX,
+                           texi2any/makeinfo, and much else.</p>
+
+<pre><code>info.texi              Describes how to read manuals in Info.
+                       This document also comes as part of GNU Emacs.
+
+info-stnd.texi         How to use the standalone GNU Info reader that is
+                       included in this distribution (./info).
+</code></pre>
+
+<p>Printing-related files:
+    doc/texinfo.tex        This implements Texinfo in TeX, to typeset a
+                           Texinfo file into a DVI or PDF file.</p>
+
+<pre><code>util/texindex.c        This file contains the source for
+                       the `texindex' program that generates
+                       sorted indices used by TeX when
+                       typesetting a file for printing.
+
+util/texi2dvi          This is a shell script for producing an
+                       indexed DVI file using TeX and texindex.
+
+util/texi2pdf          Generate PDF (wrapper for texi2dvi).
+</code></pre>
+
+<p>Source directories: 
+  djgpp/                   Support for compiling under DJGPP.
+  gnulib/                  Support files from Gnulib.
+  info/                    Standalone Info reader.
+  install-info/            Maintain the Info dir file.
+  tp/                      Texinfo Parser in Perl, includes texi2any/makeinfo.</p>
+
+<p>Translation support:
+  po/                      Strings of the programs.
+  po_document/             Strings in generated Texinfo documents.</p>
+
+<p>Installation support:
+  Makefile.am              Read by Automake to create a Makefile.in.
+  Makefile.in              Read by configure to make a Makefile,
+                             created by Automake.
+  configure.ac             Read by Autoconf to create `configure'.
+  configure                Configuration script for local conditions,
+                             created by Autoconf.
+  build-aux/               Common files.</p>
+
+<p>Finally, the contrib/ directory contains additional files from users
+provided for your reading and/or hacking pleasure.  They aren't part of
+Texinfo proper or maintained by the Texinfo developers.</p>
+        </section>
+
+        <footer>
+          Texinfo is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
