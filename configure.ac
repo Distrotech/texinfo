@@ -13,7 +13,7 @@ AC_INIT([GNU Texinfo], [4.13], [bug-texinfo@gnu.org])
 
 dnl Must come before AM_INIT_AUTOMAKE.
 AC_CONFIG_AUX_DIR([build-aux])
-AM_INIT_AUTOMAKE([1.10.1 readme-alpha dist-lzma])
+AM_INIT_AUTOMAKE([1.10.1 readme-alpha dist-xz])
 
 # Minimum Autoconf version required.
 AC_PREREQ(2.59)
@@ -135,6 +135,10 @@ for termlib in ${TERMLIB_VARIANTS}; do
   AC_CHECK_LIB(${termlib}, tgetent,
      [TERMLIBS="${TERMLIBS} -l${termlib}"; break])
 done
+if test "x$termlib" == "xncurses"; then
+  AC_CHECK_LIB(tinfo, tputs, TERMLIBS="${TERMLIBS} -ltinfo")
+fi;
+
 # don't bother warning on djgpp, it doesn't have a term library, it
 # ports each termcap-needing program separately according to its needs.
 if test -z "$TERMLIBS" && echo "$build" | grep -v djgpp >/dev/null; then
